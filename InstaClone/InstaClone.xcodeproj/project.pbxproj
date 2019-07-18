@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EC649E0122E03C1200EB8791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC649E0022E03C1200EB8791 /* AppDelegate.swift */; };
-		EC649E0322E03C1200EB8791 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC649E0222E03C1200EB8791 /* ViewController.swift */; };
 		EC649E0622E03C1200EB8791 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC649E0422E03C1200EB8791 /* Main.storyboard */; };
 		EC649E0822E03C1400EB8791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC649E0722E03C1400EB8791 /* Assets.xcassets */; };
 		EC649E0B22E03C1400EB8791 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC649E0922E03C1400EB8791 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		EC649DFD22E03C1200EB8791 /* InstaClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC649E0022E03C1200EB8791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC649E0222E03C1200EB8791 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EC649E0522E03C1200EB8791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC649E0722E03C1400EB8791 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC649E0A22E03C1400EB8791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +52,53 @@
 		EC649DFF22E03C1200EB8791 /* InstaClone */ = {
 			isa = PBXGroup;
 			children = (
-				EC649E0022E03C1200EB8791 /* AppDelegate.swift */,
-				EC649E0222E03C1200EB8791 /* ViewController.swift */,
-				EC649E0422E03C1200EB8791 /* Main.storyboard */,
-				EC649E0722E03C1400EB8791 /* Assets.xcassets */,
-				EC649E0922E03C1400EB8791 /* LaunchScreen.storyboard */,
-				EC649E0C22E03C1400EB8791 /* Info.plist */,
+				EC649E1222E03C9600EB8791 /* Model */,
+				EC649E1622E03D2900EB8791 /* Model Controller */,
+				EC649E1322E03C9E00EB8791 /* View Controller */,
+				EC649E1422E03CAD00EB8791 /* Storyboard */,
+				EC649E1522E03CC300EB8791 /* Resources */,
 			);
 			path = InstaClone;
+			sourceTree = "<group>";
+		};
+		EC649E1222E03C9600EB8791 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EC649E1322E03C9E00EB8791 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		EC649E1422E03CAD00EB8791 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				EC649E0422E03C1200EB8791 /* Main.storyboard */,
+				EC649E0922E03C1400EB8791 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		EC649E1522E03CC300EB8791 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC649E0022E03C1200EB8791 /* AppDelegate.swift */,
+				EC649E0722E03C1400EB8791 /* Assets.xcassets */,
+				EC649E0C22E03C1400EB8791 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EC649E1622E03D2900EB8791 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +172,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC649E0322E03C1200EB8791 /* ViewController.swift in Sources */,
 				EC649E0122E03C1200EB8791 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +320,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66AJPZAPLQ;
-				INFOPLIST_FILE = InstaClone/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/InstaClone/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66AJPZAPLQ;
-				INFOPLIST_FILE = InstaClone/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/InstaClone/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
