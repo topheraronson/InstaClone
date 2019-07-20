@@ -9,6 +9,23 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    let logoView: UIView = {
+        
+        let view = UIView()
+        
+        let logo = UIImageView(image: #imageLiteral(resourceName: "Instagram_logo_white"))
+        logo.contentMode = .scaleAspectFill
+        
+        view.addSubview(logo)
+        logo.anchor(top: nil, left: nil, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: 50)
+        logo.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        logo.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
+        view.backgroundColor = UIColor(red:0.12, green:0.57, blue:0.87, alpha:1.0)
+        
+        return view
+    }()
 
     let emailTextField: UITextField = {
         
@@ -31,6 +48,7 @@ class LoginViewController: UIViewController {
     }()
     
     let loginButton: UIButton = {
+        
         let button = UIButton(type: .system)
         button.setTitle("Login", for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -39,6 +57,7 @@ class LoginViewController: UIViewController {
 //        button.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         return button
     }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,22 +68,16 @@ class LoginViewController: UIViewController {
     
     func configureView() {
         
+        view.addSubview(logoView)
+        logoView.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingRight: 0, paddingBottom: 0, width: 0, height: 150)
+        
         let stackview = UIStackView(arrangedSubviews: [emailTextField, passwordTextField, loginButton])
         stackview.axis = .vertical
         stackview.spacing = 16
         stackview.distribution = .fillEqually
         
         view.addSubview(stackview)
-        stackview.anchor(top: view.topAnchor,
-                         left: view.leftAnchor,
-                         bottom: nil,
-                         right: view.rightAnchor,
-                         paddingTop: 40,
-                         paddingLeft: 24,
-                         paddingRight: 24,
-                         paddingBottom: 0,
-                         width: 0,
-                         height: 140)
+        stackview.anchor(top: logoView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, paddingTop: 40, paddingLeft: 24, paddingRight: 24, paddingBottom: 0, width: 0, height: 140)
         
     }
     
